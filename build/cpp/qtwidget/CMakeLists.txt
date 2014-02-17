@@ -70,5 +70,8 @@ add_library(qtwidgetwrapper SHARED
 # Use the Core module from Qt 5.
 qt5_use_modules(qtwidgetwrapper Core Widgets)
 
+install(TARGETS qtwidgetwrapper
+        DESTINATION libs)
+
 
 endif()

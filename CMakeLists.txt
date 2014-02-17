@@ -11,7 +11,7 @@ add_subdirectory(build)
 add_subdirectory(examples)
 
 
-set(SMIDGEN_EXE ${CMAKE_SOURCE_DIR}/../Smidgen/smidgen/install/smidgen)
+set(SMIDGEN_EXE ${CMAKE_SOURCE_DIR}/../smidgen/install/smidgen)
 
 add_custom_target(sqt_generate ALL
 

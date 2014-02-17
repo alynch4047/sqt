@@ -11,5 +11,5 @@
 %Include qobjectdefs.sip
 %Include qcoreevent.sip
 %Include qline.sip
-%Include qglobal.sip
+//%Include qglobal.sip
 

@@ -99,6 +99,14 @@ extern "C" QRect* QRect_operatorpipe_SMIX6(QRect* self, const QRect& r) {
 
 }
 
+extern "C" QRect* QRect_operatorand_SMIX7(QRect* self, const QRect& r) {
+
+	QRect retValue = self->operator&(r);
+	QRect* copiedRetValue = new QRect(retValue);
+	return copiedRetValue;
+
+}
+
 extern "C" bool QRect_contains_SMIX8(QRect* self, const QPoint& point, bool proper) {
 
 	bool retValue = self->contains(point, proper);
@@ -487,6 +495,13 @@ extern "C" bool QRect_contains_SMIX73(QRect* self, int ax, int ay) {
 extern "C" QRect& QRect_operatorpipeequals_SMIX74(QRect* self, const QRect& r) {
 
 	QRect& retValue = self->operator|=(r);
+	return retValue;
+
+}
+
+extern "C" QRect& QRect_operatorandequals_SMIX75(QRect* self, const QRect& r) {
+
+	QRect& retValue = self->operator&=(r);
 	return retValue;
 
 }

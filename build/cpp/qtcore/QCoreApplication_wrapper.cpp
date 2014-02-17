@@ -289,13 +289,6 @@ extern "C" char* QCoreApplication_applicationVersion_SMIX45()  {
 
 }
 
-extern "C" qint64 QCoreApplication_applicationPid_SMIX46() {
-
-	qint64 retValue = QCoreApplication::applicationPid();
-	return retValue;
-
-}
-
 extern "C" bool QCoreApplication_isQuitLockEnabled_SMIX49() {
 
 	bool retValue = QCoreApplication::isQuitLockEnabled();

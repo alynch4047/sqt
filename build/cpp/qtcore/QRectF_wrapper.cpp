@@ -146,6 +146,14 @@ extern "C" QRectF* QRectF_operatorpipe_SMIX21(QRectF* self, const QRectF& r) {
 
 }
 
+extern "C" QRectF* QRectF_operatorand_SMIX22(QRectF* self, const QRectF& r) {
+
+	QRectF retValue = self->operator&(r);
+	QRectF* copiedRetValue = new QRectF(retValue);
+	return copiedRetValue;
+
+}
+
 extern "C" bool QRectF_contains_SMIX23(QRectF* self, const QPointF& p) {
 
 	bool retValue = self->contains(p);
@@ -287,6 +295,13 @@ extern "C" void QRectF_setSize_SMIX72(QRectF* self, const QSizeF& s) {
 extern "C" QRectF& QRectF_operatorpipeequals_SMIX74(QRectF* self, const QRectF& r) {
 
 	QRectF& retValue = self->operator|=(r);
+	return retValue;
+
+}
+
+extern "C" QRectF& QRectF_operatorandequals_SMIX75(QRectF* self, const QRectF& r) {
+
+	QRectF& retValue = self->operator&=(r);
 	return retValue;
 
 }

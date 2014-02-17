@@ -4,3 +4,17 @@ The following files should be compiled into this modules' wrapper:
 		QPoint_wrapper.cpp
 		QPointF_wrapper.cpp
 		QRect_wrapper.cpp
+		QRectF_wrapper.cpp
+		QSize_wrapper.cpp
+		QSizeF_wrapper.cpp
+		QObject_wrapper.cpp
+		QMetaObject_wrapper.cpp
+		QMetaObject_Connection_wrapper.cpp
+		QGenericArgument_wrapper.cpp
+		QGenericReturnArgument_wrapper.cpp
+		QEvent_wrapper.cpp
+		QTimerEvent_wrapper.cpp
+		QChildEvent_wrapper.cpp
+		QDynamicPropertyChangeEvent_wrapper.cpp
+		QLine_wrapper.cpp
+		QLineF_wrapper.cpp

@@ -63,6 +63,10 @@ bool qSharedBuild();
 template<ENUM>
 class QFlags /PyQt4Flags=0x1/
 {
+%TypeHeaderCode
+#include <qglobal.h>
+%End
+
 public:
     QFlags(const QFlags &);
     // This is handled by the %ConvertToTypeCode.

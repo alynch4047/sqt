@@ -33,10 +33,14 @@ add_library(qtcorewrapper SHARED
 		QGenericReturnArgument_wrapper.cpp
 		
 		QMetaObject_Connection_wrapper.cpp
+		
 )
 
 # Use the Core module from Qt 5.
 qt5_use_modules(qtcorewrapper Core)
+
+install(TARGETS qtcorewrapper
+        DESTINATION libs)
 
 
 endif()

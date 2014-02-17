@@ -5,6 +5,8 @@
 
 #include <instance_tracker.h>
 
+#include <qglobal.h>
+
 
 
 // These externs declare the functions in the D wrapper, used for virtual method calls
@@ -75,35 +77,49 @@ public:
 //END VIRTUAL / PROTECTED CLASS 
 
 
-extern "C" QFlags_SMI* QFlags_QFlags_SMIX1(const QFlags& arg0) {
+extern "C" QFlags_SMI* QFlags_QFlags_SMIX2(const QFlags& arg0) {
 	
 	QFlags_SMI* obj = QFlags_SMI::SMIMake_QFlags(arg0);
 	return obj;
 }
 
 
-extern "C" QFlags_SMI* QFlags_QFlags_SMIX5(int arg0) {
+extern "C" QFlags_SMI* QFlags_QFlags_SMIX6(int arg0) {
 	
 	QFlags_SMI* obj = QFlags_SMI::SMIMake_QFlags(arg0);
 	return obj;
 }
 
 
-extern "C" QFlags_SMI* QFlags_QFlags_SMIX6() {
+extern "C" QFlags_SMI* QFlags_QFlags_SMIX7() {
 	
 	QFlags_SMI* obj = QFlags_SMI::SMIMake_QFlags();
 	return obj;
 }
 
 
-extern "C" QFlags& QFlags_operatorpipeequals_SMIX8(QFlags* self, QFlags f) {
+extern "C" QFlags& QFlags_operatorandequals_SMIX8(QFlags* self, int mask) {
+
+	QFlags& retValue = self->operator&=(mask);
+	return retValue;
+
+}
+
+extern "C" QFlags& QFlags_operatorpipeequals_SMIX9(QFlags* self, QFlags f) {
 
 	QFlags& retValue = self->operator|=(f);
 	return retValue;
 
 }
 
-extern "C" QFlags* QFlags_operatorpipe_SMIX13(QFlags* self, QFlags f) {
+extern "C" QFlags& QFlags_operatorxorequals_SMIX11(QFlags* self, QFlags f) {
+
+	QFlags& retValue = self->operator^=(f);
+	return retValue;
+
+}
+
+extern "C" QFlags* QFlags_operatorpipe_SMIX14(QFlags* self, QFlags f) {
 
 	QFlags retValue = self->operator|(f);
 	QFlags* copiedRetValue = new QFlags(retValue);
@@ -111,7 +127,31 @@ extern "C" QFlags* QFlags_operatorpipe_SMIX13(QFlags* self, QFlags f) {
 
 }
 
-extern "C" QFlags* QFlags_operatorpipe_SMIX26(QFlags* self, int f) {
+extern "C" QFlags* QFlags_operatorxor_SMIX16(QFlags* self, QFlags f) {
+
+	QFlags retValue = self->operator^(f);
+	QFlags* copiedRetValue = new QFlags(retValue);
+	return copiedRetValue;
+
+}
+
+extern "C" QFlags* QFlags_operatorand_SMIX18(QFlags* self, int mask) {
+
+	QFlags retValue = self->operator&(mask);
+	QFlags* copiedRetValue = new QFlags(retValue);
+	return copiedRetValue;
+
+}
+
+extern "C" QFlags* QFlags_operatorbnot_SMIX20(QFlags* self) {
+
+	QFlags retValue = self->operator~();
+	QFlags* copiedRetValue = new QFlags(retValue);
+	return copiedRetValue;
+
+}
+
+extern "C" QFlags* QFlags_operatorpipe_SMIX27(QFlags* self, int f) {
 
 	QFlags retValue = self->operator|(f);
 	QFlags* copiedRetValue = new QFlags(retValue);
@@ -119,14 +159,22 @@ extern "C" QFlags* QFlags_operatorpipe_SMIX26(QFlags* self, int f) {
 
 }
 
-extern "C" bool QFlags_operatorequals_SMIX31(QFlags* self, const QFlags& f) {
+extern "C" QFlags* QFlags_operatorxor_SMIX29(QFlags* self, int f) {
+
+	QFlags retValue = self->operator^(f);
+	QFlags* copiedRetValue = new QFlags(retValue);
+	return copiedRetValue;
+
+}
+
+extern "C" bool QFlags_operatorequals_SMIX32(QFlags* self, const QFlags& f) {
 
 	bool retValue = self->operator==(f);
 	return retValue;
 
 }
 
-extern "C" bool QFlags_operatornotequals_SMIX33(QFlags* self, const QFlags& f) {
+extern "C" bool QFlags_operatornotequals_SMIX34(QFlags* self, const QFlags& f) {
 
 	bool retValue = self->operator!=(f);
 	return retValue;
