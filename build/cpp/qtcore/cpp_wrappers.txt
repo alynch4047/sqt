@@ -1,0 +1,6 @@
+The following files should be compiled into this modules' wrapper:
+
+		QCoreApplication_wrapper.cpp
+		QPoint_wrapper.cpp
+		QPointF_wrapper.cpp
+		QRect_wrapper.cpp
