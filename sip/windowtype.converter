@@ -1,0 +1,66 @@
+	
+%Name
+WindowTypeConverter
+%End
+	
+%CToDInDInline
+	($ARGUMENTNAME)
+%End	
+	
+%DToCInDInline
+	$INCOMINGARGUMENTNAME
+%End
+	
+%TypeNameC
+Qt::WindowFlags
+%End
+
+%TypeNameD 
+int
+%End
+	
+%TransferTypeC
+int
+%End
+	
+%CToCTransferInCFunctionName
+convertQFlagsToInt
+%End
+	
+%CToCTransferInCFunction
+int convertQFlagsToInt(Qt::WindowFlags toConvert) {
+	return (int) toConvert;
+ }
+%End
+	
+%CToCTransferInCFunctionSignature
+int convertQFlagsToInt(Qt::WindowFlags toConvert)
+%End
+
+%CToCTransferInCInline
+%End
+	
+%CTransferToCInCFunction
+Qt::WindowFlags convertIntToQFlags(int toConvert) {
+	return Qt::WindowFlags(0);
+}
+%End
+	
+%CTransferToCInCFunctionName 
+convertIntToQFlags
+%End
+	
+%CTransferToCInCFunctionSignature
+Qt::WindowFlags convertIntToQFlags(int toConvert)
+%End
+
+%CTransferToCInCInline
+%End
+	
+%IncludeInHeader
+#include <Qt>
+%End
+	
+%SipDefaultValue
+$DEFAULTVALUE
+%End

@@ -1,0 +1,68 @@
+	
+%Name
+QStringConverter
+%End
+	
+%CToDInDInline
+		CToDString($ARGUMENTNAME)
+%End	
+	
+%DToCInDInline
+		cast(char*) toStringz($INCOMINGARGUMENTNAME)
+%End
+	
+%TypeNameC
+QString
+%End
+
+%TypeNameD 
+string
+%End
+	
+%TransferTypeC
+char*
+%End
+	
+%CToCTransferInCFunctionName
+convertQStringToPChar
+%End
+	
+%CToCTransferInCFunction
+char* convertQStringToPChar(QString toConvert) {
+	return (char*) toConvert.unicode();
+ }
+%End
+	
+%CToCTransferInCFunctionSignature
+char* convertQStringToPChar(QString toConvert)
+%End
+
+%CToCTransferInCInline
+%End
+	
+%CTransferToCInCFunction
+QString convertPCharToQString(char* toConvert) {
+	return *(new QString(toConvert));
+}
+%End
+	
+%CTransferToCInCFunctionName 
+convertPCharToQString
+%End
+	
+%CTransferToCInCFunctionSignature
+QString convertPCharToQString(char* toConvert)
+%End
+
+%CTransferToCInCInline
+%End
+	
+%IncludeInHeader
+#include <QString>
+%End
+
+%SipDefaultValue
+$DEFAULTVALUE
+%End
+
+	
