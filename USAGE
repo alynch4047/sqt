@@ -1,0 +1,30 @@
+This build system needs a fairly recent version of cmake, required to handle the Qt5 
+extensions.
+
+Before attempting these instructions you must have built the sister project, smidgen
+(https://github.com/alynch4047/smidgen). Smidgen is constantly being updated
+to support sqt, so make sure that your copy of smidgen is totally up to date.
+
+Firstly the base CMakeLists.txt needs a small edit to point to the built smidgen
+binary. Change the line 
+
+set(SMIDGEN_EXE ${CMAKE_SOURCE_DIR}/../smidgen/install/smidgen)
+
+so that it points to the smidgen binary. Here ${CMAKE_SOURCE_DIR} is the root
+directory of the sqt project.
+
+Now, run cmake:
+
+$ cmake .
+
+and then make install:
+
+$ make install
+
+at this point the build system needs a hand so
+
+$ export LD_LIBRARY_PATH=./install/libs
+
+and then we can run a test Qt5 application
+
+$ ./examples/test_sqt
