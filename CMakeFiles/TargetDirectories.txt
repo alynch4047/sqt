@@ -1,0 +1,8 @@
+/home/abdulhaq/gitw/sqt/build/cpp/qtcore/CMakeFiles/qtcorewrapper.dir
+/home/abdulhaq/gitw/sqt/build/cpp/qtcore/CMakeFiles/qtcorewrapper_automoc.dir
+/home/abdulhaq/gitw/sqt/build/cpp/qtwidget/CMakeFiles/qtwidgetwrapper.dir
+/home/abdulhaq/gitw/sqt/build/cpp/qtwidget/CMakeFiles/qtwidgetwrapper_automoc.dir
+/home/abdulhaq/gitw/sqt/examples/CMakeFiles/sqt_example.dir
+/home/abdulhaq/gitw/sqt/CMakeFiles/sqt_generate.dir
+/home/abdulhaq/gitw/sqt/build/cpp/CMakeFiles/tryqt.dir
+/home/abdulhaq/gitw/sqt/build/cpp/CMakeFiles/tryqt_automoc.dir
